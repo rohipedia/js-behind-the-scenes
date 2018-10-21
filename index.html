@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./index.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <h3>JS behind the scenes</h3>
+        </div>
+        <hr>
+        <div class="row">
+            <h4>JavaScript Engine</h4>
+        </div>
+        <div class="row">
+            <span>JavaScript Engine takes the code that we write to execute it.</span>
+        </div>
+        <hr>
+        <div class="row">
+            <h4>What happens inside the engine?</h4>
+        </div>
+        <div class="row">
+            <span class="col-lg-12">Step 1: The code is parsed by a parser, which checks for the syntax of the code</span>
+            <span class="col-lg-12">If the syntax is incorrect, it gives an error and stops the execution.</span>
+        </div>
+        <br>
+        <div class="row">
+            <span class="col-lg-12">Step 2: If the syntax is correct, then the parser produces a data structure which
+                is called <strong>Abstract syntax tree</strong></bold>, which is translated into machine code</span>
+            <span class="col-lg-12">Machine code can be executed by computer's processor only</span>
+        </div>
+        <br>
+        <div class="row">
+            <span class="col-lg-12">Step 3: This machine code runs and does the work</span>
+        </div>
+        <hr>
+        <div class="row">
+            <h4>Execution Contexts</h4>
+        </div>
+        <div class="row">
+            <span class="col-lg-12">The environment in which the JS code is executed.</span>
+            <span class="col-lg-12">It is like a box or a container which stores variables and in which a piece of our
+                code is evaluated and executed</span>
+            <span class="col-lg-12">Execution context can also be said to be an object.</span>
+        </div>
+        <br>
+        <div class="row">
+            <span class="col-lg-12"><i>Execution Context Object containes three properties</i></span>
+            <ul>
+                <li>Variable Object (VO) : This contains function arguments, variable declarations and function
+                    declarations</li>
+                <li>Scope chain: contains current variable objects, as well as the variable objects of all its parents</li>
+                <li>'this' variable</li>
+            </ul>
+        </div>
+        <br>
+        <div class="row">
+            <h4>Creation of execution context</h4>
+            <div class="col-lg-12">
+                <p>The three properties of the execution context object are first created in the creation phase</p>
+                <p>Then comes the execution phase</p>
+                <p>In the execution phase, the code that created the current execution context is ran line by line</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <h4>Properties of execution context in details</h4>
+        </div>
+        <br>
+        <div class="row">
+            <h3>Variable Object (VO)</h3>
+        </div>
+        <div class="row col-lg-12">
+            <h5>Creation</h5>
+        </div>
+        <div class="row">
+            <ul>
+                <li>Argument object is created. This contains all the arguments that were passed into the function.</li>
+                <li>Code scans for function declarations. A property is then created inside the VO for each function
+                    pointing to that function.</li>
+                <li>Code scans for variable declarations. A property is created in VO and set to undefined</li>
+            </ul>
+            <span class="col-lg-12">The last two points are combinedly what is called Hoisting</span>
+            <span class="col-lg-12">In JS, functions and variables are hoisted, meaning that they are available before
+                the execution starts.</span>
+        </div>
+        <br>
+        <div class="col-lg-12"><strong>IMP: Functions and Variables are hoisted in a different way. Functions are
+                already defined before the execution phase, while variables are set to undefined.</strong></div>
+        <br>
+        <div class="row col-lg-12">
+            <h5>Execution</h5>
+        </div>
+        <div class="row">
+            <ul>
+                <li>Argument object is created. This contains all the arguments that were passed into the function.</li>
+                <li>Code scans for function declarations. A property is then created inside the VO for each function
+                    pointing to that function.</li>
+                <li>Code scans for variable declarations. A property is created in VO and set to undefined</li>
+            </ul>
+            <span class="col-lg-12">The last two points are combinedly what is called Hoisting</span>
+        </div>
+        <hr>
+
+        <div class="row">
+            <h3>Scoping</h3>
+        </div>
+        <div class="row">
+            <span class="col-lg-12"><i>Scoping answers the question, "Where can we access a certain variable or function?"</i></span>
+        </div>
+        <div class="row col-lg-12">
+            <h5>Creation</h5>
+        </div>
+    </div>
+</body>
+
+</html>
